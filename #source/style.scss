@@ -240,7 +240,7 @@ header {
 	position: relative;
 	overflow: hidden;
 	&:hover {
-		background-image: url("./img/Best\ Price.jpg");
+		background-image: url("../img/Best/Price.jpg");
 		background-position: center;
 		&:before {
 			content: "";
@@ -262,7 +262,7 @@ header {
 	overflow: hidden;
 
 	&:hover {
-		background-image: url("./img/Best\ travel.jpg");
+		background-image: url("../img/Best/travel.jpg");
 		background-position: center;
 		&:before {
 			content: "";
@@ -284,7 +284,7 @@ header {
 	overflow: hidden;
 
 	&:hover {
-		background-image: url("./img/Trast\ Safety.jpg");
+		background-image: url("../img/Trast/Safety.jpg");
 		background-position: right;
 
 		&:before {
@@ -406,34 +406,34 @@ header {
 }
 
 .Thailand {
-	background-image: url("img/Thailand.jpg");
+	background-image: url("./img/Thailand.jpg");
 	background-size: cover;
 }
 
 .Australia {
-	background-image: url("img/Australia.jpg");
+	background-image: url("./img/Australia.jpg");
 	background-size: cover;
 	background-position: right;
 }
 
 .Indonesia {
-	background-image: url("img/Indonesia.jpg");
+	background-image: url("./img/Indonesia.jpg");
 	background-size: cover;
 }
 
 .France {
-	background-image: url("img/France.jpg");
+	background-image: url("./img/France.jpg");
 	background-size: cover;
 	background-position: right;
 }
 
 .Malaysia {
-	background-image: url("img/Malaysia.jpg");
+	background-image: url("./img/Malaysia.jpg");
 	background-size: cover;
 }
 
 .UAE {
-	background-image: url("img/UAE.jpg");
+	background-image: url("./img/UAE.jpg");
 	background-size: cover;
 }
 

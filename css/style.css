@@ -94,7 +94,7 @@ header {
 
 .header {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-image: url("../img/BG-header.jpg");
+  background-image: url("./img/BG-header.jpg");
   width: 100%;
   display: block;
   height: 100vh;
@@ -332,7 +332,7 @@ header {
 }
 
 .first:hover {
-  background-image: url("/img/Best Price.jpg");
+  background-image: url("../img/Best/Price.jpg");
   background-position: center;
 }
 
@@ -355,7 +355,7 @@ header {
 }
 
 .second:hover {
-  background-image: url("/img/Best travel.jpg");
+  background-image: url("../img/Best/travel.jpg");
   background-position: center;
 }
 
@@ -378,7 +378,7 @@ header {
 }
 
 .third:hover {
-  background-image: url("/img/Trast Safety.jpg");
+  background-image: url("../img/Trast/Safety.jpg");
   background-position: right;
 }
 
@@ -504,34 +504,34 @@ header {
 }
 
 .Thailand {
-  background-image: url("/img/Thailand.jpg");
+  background-image: url("./img/Thailand.jpg");
   background-size: cover;
 }
 
 .Australia {
-  background-image: url("/img/Australia.jpg");
+  background-image: url("./img/Australia.jpg");
   background-size: cover;
   background-position: right;
 }
 
 .Indonesia {
-  background-image: url("/img/Indonesia.jpg");
+  background-image: url("./img/Indonesia.jpg");
   background-size: cover;
 }
 
 .France {
-  background-image: url("/img/France.jpg");
+  background-image: url("./img/France.jpg");
   background-size: cover;
   background-position: right;
 }
 
 .Malaysia {
-  background-image: url("/img/Malaysia.jpg");
+  background-image: url("./img/Malaysia.jpg");
   background-size: cover;
 }
 
 .UAE {
-  background-image: url("/img/UAE.jpg");
+  background-image: url("./img/UAE.jpg");
   background-size: cover;
 }
 
@@ -588,7 +588,7 @@ header {
 }
 
 .Blog__item.item_1 {
-  background-image: url(/img/places/Background.jpg);
+  background-image: url(img/places/Background.jpg);
   background-size: cover;
   background-position: center;
   -ms-grid-column: span 2;
@@ -620,7 +620,7 @@ header {
 }
 
 .Blog__item.item_3 {
-  background-image: url(/img/places/Travel.jpg);
+  background-image: url(img/places/Travel.jpg);
   background-size: cover;
 }
 
@@ -699,7 +699,7 @@ header {
 }
 
 .Blog__item.item_6 {
-  background-image: url(/img/places/Journey.jpeg);
+  background-image: url(../img/places/Journey.jpeg);
   background-size: cover;
 }
 
