@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="75" height="67" viewBox="0 0 75 67">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 250px;
+        opacity: 0.1;
+        fill: #999;
+        text-anchor: middle;
+        font-family: Roboto;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <text id="_copy" data-name="“ copy" class="cls-1" transform="translate(37.499 -123.16) rotate(180)"><tspan x="0">“</tspan></text>
+</svg>
