@@ -406,34 +406,34 @@ header {
 }
 
 .Thailand {
-	background-image: url("./img/Thailand.jpg");
+	background-image: url("img/Thailand.jpg");
 	background-size: cover;
 }
 
 .Australia {
-	background-image: url("./img/Australia.jpg");
+	background-image: url("img/Australia.jpg");
 	background-size: cover;
 	background-position: right;
 }
 
 .Indonesia {
-	background-image: url("./img/Indonesia.jpg");
+	background-image: url("img/Indonesia.jpg");
 	background-size: cover;
 }
 
 .France {
-	background-image: url("./img/France.jpg");
+	background-image: url("img/France.jpg");
 	background-size: cover;
 	background-position: right;
 }
 
 .Malaysia {
-	background-image: url("./img/Malaysia.jpg");
+	background-image: url("img/Malaysia.jpg");
 	background-size: cover;
 }
 
 .UAE {
-	background-image: url("./img/UAE.jpg");
+	background-image: url("img/UAE.jpg");
 	background-size: cover;
 }
 
@@ -496,7 +496,7 @@ header {
 		max-height: 100%;
 	}
 	&__item.item_1 {
-		background-image: url(./img/places/Background.jpg);
+		background-image: url(img/places/Background.jpg);
 		background-size: cover;
 		background-position: center;
 		grid-column-start: span 2;
@@ -519,7 +519,7 @@ header {
 	}
 
 	&__item.item_3 {
-		background-image: url(./img/places/Travel.jpg);
+		background-image: url(img/places/Travel.jpg);
 		background-size: cover;
 	}
 	&__item.item_4 {
@@ -573,7 +573,7 @@ header {
 		line-height: 1.56;
 	}
 	&__item.item_6 {
-		background-image: url(./img/places/Journey.jpeg);
+		background-image: url(img/places/Journey.jpeg);
 		background-size: cover;
 		// aspect-ratio: 3 / 2;
 	}
