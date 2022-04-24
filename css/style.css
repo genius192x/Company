@@ -332,7 +332,7 @@ header {
 }
 
 .first:hover {
-  background-image: url("../img/Best/Price.jpg");
+  background-image: url("../img/Best Price.jpg");
   background-position: center;
 }
 
@@ -355,7 +355,7 @@ header {
 }
 
 .second:hover {
-  background-image: url("../img/Best/travel.jpg");
+  background-image: url("../img/Best travel.jpg");
   background-position: center;
 }
 
@@ -378,7 +378,7 @@ header {
 }
 
 .third:hover {
-  background-image: url("../img/Trast/Safety.jpg");
+  background-image: url("../img/Trast Safety.jpg");
   background-position: right;
 }
 
