@@ -496,7 +496,7 @@ header {
 		max-height: 100%;
 	}
 	&__item.item_1 {
-		background-image: url(img/places/Background.jpg);
+		background-image: url(../img/places/Background.jpg);
 		background-size: cover;
 		background-position: center;
 		grid-column-start: span 2;
@@ -519,7 +519,7 @@ header {
 	}
 
 	&__item.item_3 {
-		background-image: url(img/places/Travel.jpg);
+		background-image: url(../img/places/Travel.jpg);
 		background-size: cover;
 	}
 	&__item.item_4 {
