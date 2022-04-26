@@ -50,33 +50,42 @@ header {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		gap: 40px;
+	}
+
+	&__logo {
+		img {
+			max-width: 130px;
+		}
 	}
 
 	&__menu {
-		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
 		position: relative;
 		padding: 20px 0px 40px 0px;
-		font-size: 16px;
-		line-height: 37px;
-		letter-spacing: 0.3px;
+		font-size: 18px;
+		letter-spacing: 0.8px;
+		// background-color: hsla(0, 0%, 100%, 0.05);
+		// backdrop-filter: blur(10px);
 		li {
-			margin: 0px 20px 0px 0px;
 		}
 		a {
 			color: white;
+			background-image: linear-gradient(90deg, yellow, green);
+			background-size: 0% 2px;
+			background-repeat: no-repeat;
+			background-position: left bottom;
+			transition: background-size 300ms ease;
 			&:hover {
-				text-shadow: 0px 0px 10px white;
+				background-size: 100% 2px;
 			}
 		}
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: 10px;
-			right: 0px;
-			background-color: #8795a9;
-			width: 100%;
-			height: 1px;
-		}
+	}
+	&__burger {
+		display: none;
 	}
 
 	&__title {
@@ -1003,10 +1012,22 @@ header {
 	.comments__card::after {
 		content: ("");
 	}
+	.header__menu {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+	.header__title {
+		margin-top: 9%;
+		font-size: 60px;
+	}
 }
 @media (max-width: 767px) {
+	body.lock {
+		overflow: hidden;
+	}
 	.container {
-		max-width: 500px;
+		max-width: 700px;
 		height: 100%;
 		margin: 0 auto;
 	}
@@ -1014,11 +1035,85 @@ header {
 		margin-top: 20%;
 		font-size: 60px;
 	}
+	.header__menu {
+		display: flex;
+		flex-direction: row;
+	}
+	.header__items {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 73%;
+		height: 100%;
+		overflow: auto;
+		background-color: hsla(0, 0%, 100%, 0.1);
+		backdrop-filter: blur(10px);
+		padding: 100px 0px 0px 0px;
+		z-index: 3;
+		transition: all 0.4s ease 0s;
+	}
+	.header__items.active {
+		right: 0;
+		transition: all 0.4s ease 0s;
+		padding: 50px 0px 0px 0px;
+	}
+	.header__list {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		font-size: 24px;
+		// padding: 50px 0px 0px 0px;
+		// margin: 30% 10% 0% 70%;
+	}
+	.header__burger {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		z-index: 4;
+	}
+	.header__burger.active span {
+		transform: scale(0);
+	}
+	.header__burger.active::before {
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	.header__burger.active::after {
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+	.header__burger span {
+		position: absolute;
+		background-color: white;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 9px;
+		transition: all 0.3s ease 0s;
+	}
+	.header__burger::before,
+	.header__burger::after {
+		content: ("");
+		background-color: white;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+	.header__burger::before {
+		top: 0;
+	}
+	.header__burger::after {
+		bottom: 0;
+	}
 	.header__subtitle {
 		font-size: 20px;
 	}
 	.header__btn {
-		margin-top: 30%;
+		margin-top: 10%;
 	}
 	.header__btn span {
 		font-size: 14px;
@@ -1027,6 +1122,7 @@ header {
 		display: flex;
 		flex-wrap: wrap;
 		flex: 1 1 100%;
+		gap: 20px;
 	}
 	.welcome__subtitle {
 		margin-bottom: 5%;
@@ -1141,9 +1237,22 @@ header {
 }
 @media (max-width: 480px) {
 	.container {
-		max-width: 300px;
+		max-width: 350px;
 		max-height: 100%;
 		margin: 0 auto;
+	}
+	.header__items {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 80%;
+		height: 100%;
+		overflow: auto;
+		background-color: hsla(0, 0%, 100%, 0.1);
+		backdrop-filter: blur(10px);
+		padding: 100px 0px 0px 0px;
+		z-index: 3;
+		transition: all 0.4s ease 0s;
 	}
 	.welcome__card {
 		padding: 90px 50px 50px 10px;
@@ -1215,5 +1324,20 @@ header {
 	}
 	.Blog_text.text {
 		margin: 30px 20px 10px 40px;
+	}
+}
+@media (max-width: 380px) {
+	.header__items {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 90%;
+		height: 100%;
+		overflow: auto;
+		background-color: hsla(0, 0%, 100%, 0.1);
+		backdrop-filter: blur(10px);
+		padding: 100px 0px 0px 0px;
+		z-index: 3;
+		transition: all 0.4s ease 0s;
 	}
 }
