@@ -23,3 +23,16 @@ if (document.documentElement.clientWidth > 992) {
 	$('.welcome__card').addClass('hover');
 
 }
+
+$('.filter__item').click(function (event) {
+	var i = $(this).data('filter');
+	if (i == 1) {
+		$('.find__card').show();
+	} else {
+		$('.find__card').hide();
+		$('.find__card.f_' + i).show();
+	}
+	$('.filter__item').removeClass('active');
+	$(this).addClass('active')
+	return false;
+})
