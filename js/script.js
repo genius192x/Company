@@ -9,7 +9,7 @@ $(document).ready(function () {
 	});
 });
 
-if (document.documentElement.clientWidth <= 768) {
+if (document.documentElement.clientWidth <= 992) {
 	$('.welcome__card').click(function (event) {
 		if ($('.welcome__row').hasClass('one')) {
 			$('.welcome__card').not($(this)).removeClass('active');
@@ -19,7 +19,7 @@ if (document.documentElement.clientWidth <= 768) {
 	});
 
 }
-if (document.documentElement.clientWidth > 768) {
+if (document.documentElement.clientWidth > 992) {
 	$('.welcome__card').addClass('hover');
 
 }
