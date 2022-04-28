@@ -281,6 +281,40 @@ header {
   border-radius: 10px;
 }
 
+.welcome .welcome__card.hover:hover {
+  background-size: cover;
+  text-align: left;
+  border: 1px solid #cccccc;
+  border-radius: 15px;
+  padding: 70px 20px 20px 20px;
+  -webkit-box-shadow: 20px 15px 10px gray;
+          box-shadow: 20px 15px 10px gray;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.welcome .welcome__card.hover:hover .welcome__cardtext {
+  position: relative;
+  opacity: 1;
+  color: white;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.welcome .welcome__card.hover:hover .welcome__cardtitle {
+  position: relative;
+  color: white;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.welcome .welcome__card.hover:hover .welcome__icon {
+  position: relative;
+  margin: 0;
+  -webkit-transition-duration: all 1s;
+          transition-duration: all 1s;
+}
+
 .welcome__items {
   height: 189px;
   width: 203px;
@@ -311,12 +345,12 @@ header {
   transition: all ease 800ms;
 }
 
-.welcome__card.first.active:hover {
+.welcome__card.first.hover:hover {
   background-image: url("../img/Best Price.jpg");
   background-position: center;
 }
 
-.welcome__card.first.active:hover:before {
+.welcome__card.first.hover:hover:before {
   content: "";
   display: block;
   width: 100%;
@@ -329,50 +363,6 @@ header {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.welcome__card.active {
-  text-align: center;
-  width: 309px;
-  height: 309px;
-  margin: 0px 22px 10% 0px;
-  padding: 80px 50px 50px 50px;
-  border: 1px solid #a09e9e;
-  border-radius: 10px;
-}
-
-.welcome__card.active:hover {
-  background-size: cover;
-  text-align: left;
-  border: 1px solid #cccccc;
-  border-radius: 15px;
-  padding: 70px 20px 20px 20px;
-  -webkit-box-shadow: 20px 15px 10px gray;
-          box-shadow: 20px 15px 10px gray;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-.welcome__card.active:hover .welcome__cardtext {
-  position: relative;
-  opacity: 1;
-  color: white;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-}
-
-.welcome__card.active:hover .welcome__cardtitle {
-  position: relative;
-  color: white;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-}
-
-.welcome__card.active:hover .welcome__icon {
-  position: relative;
-  margin: 0;
-  -webkit-transition-duration: all 1s;
-          transition-duration: all 1s;
-}
-
 .second {
   position: relative;
   overflow: hidden;
@@ -380,12 +370,12 @@ header {
   transition: all ease 800ms;
 }
 
-.welcome__card.second.active:hover {
+.welcome__card.second.hover:hover {
   background-image: url("../img/Best travel.jpg");
   background-position: center;
 }
 
-.welcome__card.second.active:hover:before {
+.welcome__card.second.hover:hover:before {
   content: "";
   display: block;
   width: 100%;
@@ -405,12 +395,12 @@ header {
   transition: all ease 800ms;
 }
 
-.welcome__card.third.active:hover {
+.welcome__card.third.hover:hover {
   background-image: url("../img/Trast Safety.jpg");
   background-position: right;
 }
 
-.welcome__card.third.active:hover:before {
+.welcome__card.third.hover:hover:before {
   content: "";
   display: block;
   width: 100%;
@@ -1428,6 +1418,92 @@ header {
   }
   .welcome__card.third {
     margin: 0px 0px 7% 0px;
+  }
+  .welcome__card.active {
+    text-align: center;
+    width: 309px;
+    height: 309px;
+    padding: 80px 50px 50px 50px;
+    border: 1px solid #a09e9e;
+    border-radius: 10px;
+  }
+  .welcome__card.active:hover {
+    background-size: cover;
+    text-align: left;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    padding: 70px 20px 20px 20px;
+    -webkit-box-shadow: 20px 15px 10px gray;
+            box-shadow: 20px 15px 10px gray;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+  }
+  .welcome__card.active:hover .welcome__cardtext {
+    position: relative;
+    opacity: 1;
+    color: white;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+  }
+  .welcome__card.active:hover .welcome__cardtitle {
+    position: relative;
+    color: white;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+  }
+  .welcome__card.active:hover .welcome__icon {
+    position: relative;
+    margin: 0;
+    -webkit-transition-duration: all 1s;
+            transition-duration: all 1s;
+  }
+  .welcome__card.first.active:hover {
+    background-image: url("../img/Best Price.jpg");
+    background-position: center;
+  }
+  .welcome__card.first.active:hover:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .welcome__card.second.active:hover {
+    background-image: url("../img/Best travel.jpg");
+    background-position: center;
+  }
+  .welcome__card.second.active:hover:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .welcome__card.third.active:hover {
+    background-image: url("../img/Trast Safety.jpg");
+    background-position: right;
+  }
+  .welcome__card.third.active:hover:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
   }
   .first {
     margin: 0px 0px 0px 0px;

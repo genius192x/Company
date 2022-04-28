@@ -7,20 +7,19 @@ $(document).ready(function () {
 		arrows: true,
 		dots: true,
 	});
-
-
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		// код для мобильных устройств
-		$('.welcome__card').click(function (event) {
-			if ($('.welcome__row').hasClass('one')) {
-				$('.welcome__card').not($(this)).removeClass('active');
-			}
-			$(this).toggleClass('active');
-
-		});
-	} else {
-		// код для обычных устройств
-	}
 });
 
+if (document.documentElement.clientWidth <= 768) {
+	$('.welcome__card').click(function (event) {
+		if ($('.welcome__row').hasClass('one')) {
+			$('.welcome__card').not($(this)).removeClass('active');
+		}
+		$(this).toggleClass('active');
 
+	});
+
+}
+if (document.documentElement.clientWidth > 768) {
+	$('.welcome__card').addClass('hover');
+
+}
