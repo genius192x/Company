@@ -151,7 +151,7 @@ header {
   letter-spacing: 0.8px;
 }
 
-.header__menu a {
+.header__menu .header__list a {
   color: white;
   background-image: -webkit-gradient(linear, left top, right top, from(yellow), to(green));
   background-image: linear-gradient(90deg, yellow, green);
@@ -162,7 +162,7 @@ header {
   transition: background-size 300ms ease;
 }
 
-.header__menu a:hover {
+.header__menu .header__list a:hover {
   background-size: 100% 2px;
 }
 
@@ -267,6 +267,26 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 30px;
+}
+
+.welcome__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  height: 100%;
 }
 
 .welcome__card {
@@ -275,10 +295,10 @@ header {
   text-align: center;
   width: 309px;
   height: 309px;
-  margin: 0px 22px 10% 0px;
-  padding: 80px 50px 50px 50px;
   border: 1px solid #a09e9e;
   border-radius: 10px;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
 }
 
 .welcome .welcome__card.hover:hover {
@@ -289,53 +309,53 @@ header {
   padding: 70px 20px 20px 20px;
   -webkit-box-shadow: 20px 15px 10px gray;
           box-shadow: 20px 15px 10px gray;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 1.25s ease;
+  transition: 1.25s ease;
+}
+
+.welcome .welcome__card.hover:hover .welcome__items {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .welcome .welcome__card.hover:hover .welcome__cardtext {
   position: relative;
-  opacity: 1;
+  display: block;
   color: white;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .welcome .welcome__card.hover:hover .welcome__cardtitle {
   position: relative;
   color: white;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .welcome .welcome__card.hover:hover .welcome__icon {
   position: relative;
   margin: 0;
-  -webkit-transition-duration: all 1s;
-          transition-duration: all 1s;
-}
-
-.welcome__items {
-  height: 189px;
-  width: 203px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .welcome__icon {
   width: 42px;
   height: 40px;
-  margin: 0 auto;
 }
 
 .welcome__cardtitle {
-  margin: 30px 0px 30px 0px;
   font-size: 18px;
   color: #4a4a4a;
 }
 
 .welcome__cardtext {
-  opacity: 0;
+  max-width: 200px;
+  display: none;
   font-size: 16px;
-  color: #757575;
+  color: #4a4a4a;
 }
 
 .first {
@@ -426,8 +446,9 @@ header {
 	! FIND DIV	
 */
 .find__content {
-  max-width: 1600px;
+  width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .find .container {
@@ -471,7 +492,10 @@ header {
 }
 
 .find .filter__item.active {
-  color: #ffb331d7;
+  display: inline-block;
+  background: linear-gradient(45deg, #fa9600, #ff5e00, #f8e800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .find__row {
@@ -488,6 +512,7 @@ header {
       flex-wrap: wrap;
   position: relative;
   gap: 50px;
+  min-width: 0;
 }
 
 .find__row::after {
@@ -501,9 +526,84 @@ header {
   height: 1px;
 }
 
+.find .find__slider {
+  min-width: 0;
+}
+
+.find__slider {
+  position: relative;
+  /* Активная точка */
+  /* Элемент точки */
+}
+
+.find__slider .slick-slide {
+  margin: 0 20px;
+}
+
+.find__slider .slick-list {
+  padding: 20px 30px 50px 30px;
+  overflow: visible;
+}
+
+.find__slider .slick-arrow {
+  position: absolute;
+  top: 42%;
+  font-size: 0;
+  width: 48px;
+  height: 48px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.find__slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url(/img/arrows/icons8-шеврон-влево-48.png) 0 0 no-repeat;
+  z-index: 10;
+}
+
+.find__slider .slick-arrow.slick-next {
+  right: 0;
+  background: url(/img/arrows/icons8-шеврон-вправо-48.png) 0 0 no-repeat;
+  z-index: 10;
+}
+
+.find__slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.find__slider .slick-dots li {
+  list-style: none;
+  margin: 20px 10px;
+}
+
+.find__slider .slick-dots li.slick-active button {
+  font-size: 0;
+  background-color: transparent;
+  background-color: #fbad27;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.find__slider .slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #b8b8b8;
+  border-radius: 50%;
+}
+
 .find__card {
-  width: 395px;
-  height: 400px;
+  min-width: 305px;
+  height: 300px;
   background-color: #b2b2b2;
   position: relative;
   border: 1px solid #b2b2b2;
@@ -523,19 +623,65 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.find__card:hover {
+.find__card.hover:hover {
   -webkit-box-shadow: 30px 20px 20px gray;
           box-shadow: 30px 20px 20px gray;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.find__card.hover:hover .find__cardtitle :after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.find__card.hover:hover .card__text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.find__card.active:hover {
+  -webkit-box-shadow: 30px 20px 20px gray;
+          box-shadow: 30px 20px 20px gray;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.find__card.active:hover .find__cardtitle :after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.find__card.active:hover .card__text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
 .find__cardtitle {
-  margin-top: 50px;
-  text-align: center;
+  text-align: left;
   font-size: 27px;
   font-weight: bold;
   line-height: 1.46;
@@ -544,12 +690,102 @@ header {
   position: relative;
 }
 
+.find__cardtitle ::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  left: -20px;
+  bottom: 0;
+  background: #ffae00;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.find .card__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0px 0px 20px 20px;
+  -webkit-transform: translateY(26%);
+          transform: translateY(26%);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+}
+
+.find__cardsubtitle {
+  color: white;
+  font-size: 14px;
+}
+
+.find__cardsubtitle p {
+  color: white;
+  font-size: 20;
+}
+
+.find .card__btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  color: #ffae00;
+  font-size: 16px;
+  padding-inline: 10px;
+  border-radius: 10px;
+  line-height: 2;
+  background-color: #fff;
+}
+
 .secondrow {
   margin-top: 0px;
 }
 
 .Thailand {
   background-image: url("../img/Thailand.jpg");
+  background-size: cover;
+}
+
+.USA {
+  background-image: url("../img/USA.jpg");
+  background-size: cover;
+}
+
+.Canada {
+  background-image: url("../img/Canada.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.Germany {
+  background-image: url("../img/Germany.jpg");
+  background-size: cover;
+}
+
+.Spain {
+  background-image: url("../img/Spain.jpg");
+  background-size: cover;
+}
+
+.Italy {
+  background-image: url("../img/Italy.jpg");
+  background-size: cover;
+}
+
+.Brazil {
+  background-image: url("../img/Brazil.jpg");
   background-size: cover;
 }
 
@@ -865,7 +1101,7 @@ header {
 
 .comments__card-avatar img {
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-box-shadow: 0px 12px 59px 0 rgba(0, 0, 0, 0.08);
@@ -908,11 +1144,6 @@ header {
 /* Слайдер запущен */
 /* Слайдер с точками */
 /* Ограничивающая оболочка */
-.slick-list {
-  max-width: 100%;
-  overflow: hidden;
-}
-
 /* Лента слайдов */
 .slick-track {
   display: -webkit-box;
@@ -936,6 +1167,11 @@ header {
   position: relative;
   /* Активная точка */
   /* Элемент точки */
+}
+
+.comments__slider .slick-list {
+  overflow: hidden;
+  padding: 25px 0px;
 }
 
 .comments__slider .slick-arrow {
@@ -977,11 +1213,21 @@ header {
   margin: 0 10px;
 }
 
+.comments__slider .slick-dots li.slick-active button {
+  font-size: 0;
+  background-color: transparent;
+  background-color: #fbad27;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
 .comments__slider .slick-dots li button {
   font-size: 0;
   width: 10px;
   height: 10px;
-  border-radius: 5px;
+  background-color: #b8b8b8;
+  border-radius: 50%;
 }
 
 .book .container {
@@ -998,7 +1244,7 @@ header {
 .book__row {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 50px 0px 50px 50px;
+  padding: 50px 0px 50px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1008,6 +1254,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 50px;
 }
 
 .book__text {
@@ -1021,24 +1270,17 @@ header {
 }
 
 .book__btn {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 20%;
-          flex: 1 1 20%;
   -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
-  width: 100%;
-}
-
-.book__btn span {
-  width: 100%;
+  display: inline-block;
   color: white;
-  line-height: 32px;
-  padding: 12px 64px;
+  line-height: 2;
+  padding: 0px 20px;
   border-radius: 24px;
   -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.08);
           box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.08);
   border: solid 2px #fff;
-  font-size: 10px;
+  font-size: 20px;
 }
 
 .book__btn:hover {
@@ -1118,6 +1360,13 @@ header {
   color: #616161;
 }
 
+@media (max-width: 1629px) {
+  .card__text {
+    -webkit-transform: translateY(30%) !important;
+            transform: translateY(30%) !important;
+  }
+}
+
 @media (max-width: 1394px) {
   .footer__row {
     padding: 20px;
@@ -1155,11 +1404,22 @@ header {
   .title {
     margin: 10% 0px 30px 0px;
   }
-  .welcome__card.second {
-    margin: 0px 22px 5% 0px;
+  .find__slider .slick-slide {
+    margin: 0 10px;
+    padding: 50px;
   }
-  .welcome__card.first {
-    margin: 0px 22px 5% 0px;
+  .find__slider .slick-list {
+    padding: 0;
+  }
+  .find .container {
+    padding: 0;
+  }
+  .find__text {
+    padding: 0 10px;
+  }
+  .card__text {
+    -webkit-transform: translateY(80%) !important;
+            transform: translateY(80%) !important;
   }
   .find__row {
     display: -webkit-box;
@@ -1202,6 +1462,20 @@ header {
   }
 }
 
+@media (max-width: 1123px) {
+  .card__text {
+    -webkit-transform: translateY(77%) !important;
+            transform: translateY(77%) !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .card__text {
+    -webkit-transform: translateY(70%) !important;
+            transform: translateY(70%) !important;
+  }
+}
+
 @media (max-width: 992px) {
   .header__title {
     margin-top: 23%;
@@ -1210,7 +1484,6 @@ header {
     text-align: center;
     width: 309px;
     height: 309px;
-    padding: 80px 50px 50px 50px;
     border: 1px solid #a09e9e;
     border-radius: 10px;
   }
@@ -1225,9 +1498,14 @@ header {
     -webkit-transition: 1s ease;
     transition: 1s ease;
   }
+  .welcome__card.active:hover .welcome__items {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
   .welcome__card.active:hover .welcome__cardtext {
     position: relative;
-    opacity: 1;
+    display: block;
     color: white;
     -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s;
@@ -1263,6 +1541,9 @@ header {
   .welcome__card.second.active:hover {
     background-image: url("../img/Best travel.jpg");
     background-position: center;
+  }
+  .welcome__card.second.active:hover .welcome__subtitle {
+    display: block;
   }
   .welcome__card.second.active:hover:before {
     content: "";
@@ -1302,9 +1583,6 @@ header {
   .title {
     margin: 10% 0px 30px 0px;
   }
-  .welcome__card {
-    margin: 0px 22px 10% 0px;
-  }
   .find__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1336,7 +1614,6 @@ header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 50px;
   }
   .book__btn {
     max-width: 178px;
@@ -1407,14 +1684,13 @@ header {
             backdrop-filter: blur(10px);
     padding: 100px 0px 0px 0px;
     z-index: 3;
-    -webkit-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s;
   }
   .header__items.active {
     right: 0;
-    -webkit-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
-    padding: 50px 0px 0px 0px;
+    -webkit-transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s;
   }
   .header__list {
     display: -webkit-box;
@@ -1497,22 +1773,7 @@ header {
     gap: 20px;
   }
   .welcome__subtitle {
-    margin-bottom: 5%;
-  }
-  .welcome__card {
-    padding: 100px 50px 50px 50px;
-  }
-  .welcome__card.second {
-    margin: 0px 0px 7% 0px;
-  }
-  .welcome__card.first {
-    margin: 0px 0px 7% 0px;
-  }
-  .welcome__card.third {
-    margin: 0px 0px 7% 0px;
-  }
-  .first {
-    margin: 0px 0px 0px 0px;
+    margin-bottom: 15%;
   }
   .find__content {
     max-width: 3000px;
@@ -1639,8 +1900,12 @@ header {
     -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
   }
-  .welcome__card {
-    padding: 90px 50px 50px 12%;
+  .find__menu {
+    margin-bottom: 10%;
+    margin-inline: 20px;
+  }
+  .find__slider {
+    padding: 0px 10px;
   }
   .Blog__row {
     max-width: 400px;
@@ -1731,11 +1996,15 @@ header {
   .slick-list {
     overflow: hidden;
   }
-  .slick-track {
-    gap: 60px;
+  .slick-slide {
+    margin: 0px 20px;
   }
-  .slick-arrow {
-    opacity: 0;
+  .comments__slider {
+    position: relative;
+  }
+  .comments__slider .slick-list {
+    overflow: hidden;
+    padding: 40px 0px;
   }
 }
 

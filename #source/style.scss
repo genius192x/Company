@@ -72,7 +72,7 @@ header {
 		// backdrop-filter: blur(10px);
 		li {
 		}
-		a {
+		.header__list a {
 			color: white;
 			background-image: linear-gradient(90deg, yellow, green);
 			background-size: 0% 2px;
@@ -185,6 +185,16 @@ header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		gap: 30px;
+	}
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		justify-content: center;
+		align-items: center;
+		max-width: 100%;
+		height: 100%;
 	}
 
 	&__card {
@@ -192,13 +202,16 @@ header {
 		text-align: center;
 		width: 309px;
 		height: 309px;
-		margin: 0px 22px 10% 0px;
-		padding: 80px 50px 50px 50px;
 		border: 1px solid #a09e9e;
 		border-radius: 10px;
+		transition: 2s ease;
 	}
 	.welcome__card.hover {
 		&:hover {
+			.welcome__items {
+				align-items: flex-start;
+			}
+
 			background-size: cover;
 			text-align: left;
 			border: 1px solid #cccccc;
@@ -207,44 +220,42 @@ header {
 			box-shadow: 20px 15px 10px gray;
 			.welcome__cardtext {
 				position: relative;
-				opacity: 1;
+				display: block;
 				color: white;
-				transition-duration: 0.5s;
+				transition-duration: 1s;
 			}
 			.welcome__cardtitle {
 				position: relative;
 				color: white;
-				transition-duration: 0.5s;
+				transition-duration: 1s;
 			}
 			.welcome__icon {
 				position: relative;
 				margin: 0;
-				transition-duration: all 1s;
+				transition: 1s ease;
 			}
-			transition: 1s ease;
+			transition: 1.25s ease;
 		}
 	}
 
-	&__items {
-		height: 189px;
-		width: 203px;
-	}
 	&__icon {
 		width: 42px;
 		height: 40px;
-		margin: 0 auto;
 	}
 
 	&__cardtitle {
-		margin: 30px 0px 30px 0px;
+		// margin: 30px 0px 30px 0px;
 		font-size: 18px;
 		color: #4a4a4a;
 	}
 
 	&__cardtext {
-		opacity: 0;
+		// opacity: 0;
+		max-width: 200px;
+		display: none;
 		font-size: 16px;
-		color: #757575;
+
+		color: #4a4a4a;
 	}
 }
 
@@ -335,8 +346,9 @@ header {
 
 .find {
 	&__content {
-		max-width: 1600px;
+		width: 100%;
 		margin: 0 auto;
+		overflow: hidden;
 	}
 	.container {
 		max-width: 100%;
@@ -372,7 +384,11 @@ header {
 		justify-content: space-around;
 	}
 	.filter__item.active {
-		color: #ffb331d7;
+		display: inline-block;
+
+		background: linear-gradient(45deg, rgb(250, 150, 0), rgb(255, 94, 0), rgb(248, 232, 0));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 
 	&__row {
@@ -382,6 +398,7 @@ header {
 		flex-wrap: wrap;
 		position: relative;
 		gap: 50px;
+		min-width: 0;
 
 		&::after {
 			content: "";
@@ -394,10 +411,68 @@ header {
 			height: 1px;
 		}
 	}
-
+	.find__slider {
+		min-width: 0;
+	}
+	&__slider {
+		position: relative;
+		// padding: 0 50px;
+		.slick-slide {
+			margin: 0 20px;
+		}
+		.slick-list {
+			padding: 20px 30px 50px 30px;
+			overflow: visible;
+		}
+		.slick-arrow {
+			position: absolute;
+			top: 42%;
+			font-size: 0;
+			width: 48px;
+			height: 48px;
+			transform: translate(0, -50%);
+		}
+		.slick-arrow.slick-prev {
+			left: 0;
+			background: url(/img/arrows/icons8-шеврон-влево-48.png) 0 0 no-repeat;
+			z-index: 10;
+		}
+		.slick-arrow.slick-next {
+			right: 0;
+			background: url(/img/arrows/icons8-шеврон-вправо-48.png) 0 0 no-repeat;
+			z-index: 10;
+		}
+		.slick-dots {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.slick-dots li {
+			list-style: none;
+			margin: 20px 10px;
+		}
+		/* Активная точка */
+		.slick-dots li.slick-active button {
+			font-size: 0;
+			background-color: transparent;
+			// border: 1px rgb(184, 184, 184) solid;
+			background-color: #fbad27;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+		}
+		/* Элемент точки */
+		.slick-dots li button {
+			font-size: 0;
+			width: 10px;
+			height: 10px;
+			background-color: rgb(184, 184, 184);
+			border-radius: 50%;
+		}
+	}
 	&__card {
-		width: 395px;
-		height: 400px;
+		min-width: 305px;
+		height: 300px;
 		background-color: #b2b2b2;
 		// margin: 5% 2.5% 5% 2.5%;
 		position: relative;
@@ -415,26 +490,94 @@ header {
 			left: 0;
 			right: 0;
 			bottom: 0;
-			background-color: rgba(0, 0, 0, 0.4);
+			background-color: rgba(0, 0, 0, 0.1);
 		}
+	}
+	&__card.hover {
 		&:hover {
 			box-shadow: 30px 20px 20px gray;
-			transform: scale(1.1);
+			transform: scale(1.05);
+			.find__cardtitle {
+				:after {
+					transform: scaleX(1);
+					transition: transform 500ms ease;
+					transform-origin: left;
+				}
+			}
+			.card__text {
+				transform: translateY(0);
+				transition: transform 500ms ease;
+			}
+		}
+	}
+	&__card.active {
+		&:hover {
+			box-shadow: 30px 20px 20px gray;
+			transform: scale(1.05);
+			.find__cardtitle {
+				:after {
+					transform: scaleX(1);
+					transition: transform 500ms ease;
+					transform-origin: left;
+				}
+			}
+			.card__text {
+				transform: translateY(0);
+				transition: transform 500ms ease;
+			}
 		}
 	}
 
 	&__cardtitle {
-		margin-top: 50px;
-		text-align: center;
+		// --margin: 40% 0px 0px 5%;
+		// margin: var(--margin);
+		text-align: left;
 		font-size: 27px;
 		font-weight: bold;
 		line-height: 1.46;
 		letter-spacing: 0.48px;
 		color: #fff;
 		position: relative;
-	}
 
-	&__cardimg {
+		::after {
+			content: ("");
+			position: absolute;
+			height: 3px;
+			width: 50%;
+			left: -20px;
+			bottom: 0;
+			background: #ffae00;
+			transform: scaleX(0);
+		}
+	}
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(26%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
+	&__cardsubtitle {
+		p {
+			color: white;
+			font-size: 20;
+		}
+		color: white;
+		font-size: 14px;
+	}
+	.card__btn {
+		width: max-content;
+		position: relative;
+		color: #ffae00;
+		font-size: 16px;
+		padding-inline: 10px;
+		border-radius: 10px;
+		line-height: 2;
+		background-color: #fff;
 	}
 }
 
@@ -444,6 +587,31 @@ header {
 
 .Thailand {
 	background-image: url("../img/Thailand.jpg");
+	background-size: cover;
+}
+.USA {
+	background-image: url("../img/USA.jpg");
+	background-size: cover;
+}
+.Canada {
+	background-image: url("../img/Canada.jpg");
+	background-size: cover;
+	background-position: right;
+}
+.Germany {
+	background-image: url("../img/Germany.jpg");
+	background-size: cover;
+}
+.Spain {
+	background-image: url("../img/Spain.jpg");
+	background-size: cover;
+}
+.Italy {
+	background-image: url("../img/Italy.jpg");
+	background-size: cover;
+}
+.Brazil {
+	background-image: url("../img/Brazil.jpg");
 	background-size: cover;
 }
 
@@ -728,17 +896,16 @@ header {
 
 	&__card-avatar {
 		flex: 1 1 30%;
-		// max-width: 200px;
-		// max-height: 200px;
+
 		overflow: hidden;
 		border-radius: 8px;
 		box-shadow: 0px 12px 59px 0 rgba(0, 0, 0, 0.08);
 		// object-fit: cover;
 		img {
 			width: 100%;
-			height: 100%;
+			max-height: 100%;
 			object-fit: cover;
-			// border-radius: 8px;
+
 			box-shadow: 0px 12px 59px 0 rgba(0, 0, 0, 0.08);
 			background-color: #b2b2b2;
 		}
@@ -778,8 +945,8 @@ header {
 }
 /* Ограничивающая оболочка */
 .slick-list {
-	max-width: 100%;
-	overflow: hidden;
+	// max-width: 100%;
+	// overflow: hidden;
 }
 /* Лента слайдов */
 .slick-track {
@@ -825,6 +992,11 @@ header {
 }
 .comments__slider {
 	position: relative;
+	.slick-list {
+		// max-width: 100%;
+		overflow: hidden;
+		padding: 25px 0px;
+	}
 	.slick-arrow {
 		position: absolute;
 		top: 50%;
@@ -853,14 +1025,22 @@ header {
 		margin: 0 10px;
 	}
 	/* Активная точка */
-	.slick-dots li.slick-active {
+	.slick-dots li.slick-active button {
+		font-size: 0;
+		background-color: transparent;
+
+		background-color: #fbad27;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
 	}
 	/* Элемент точки */
 	.slick-dots li button {
 		font-size: 0;
 		width: 10px;
 		height: 10px;
-		border-radius: 5px;
+		background-color: rgb(184, 184, 184);
+		border-radius: 50%;
 	}
 }
 
@@ -879,10 +1059,12 @@ header {
 	&__row {
 		max-width: 1280px;
 		margin: 0 auto;
-		padding: 50px 0px 50px 50px;
+		padding: 50px 0px 50px 0px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: nowrap;
+		gap: 50px;
 	}
 
 	&__text {
@@ -894,20 +1076,16 @@ header {
 	}
 
 	&__btn {
-		flex: 1 1 20%;
 		transition: 0.25s ease;
-		width: 100%;
-		// height: 65px;
-		span {
-			width: 100%;
-			color: white;
-			line-height: 32px;
-			padding: 12px 64px;
-			border-radius: 24px;
-			box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.08);
-			border: solid 2px #fff;
-			font-size: 10px;
-		}
+		display: inline-block;
+		color: white;
+		line-height: 2;
+		padding: 0px 20px;
+		border-radius: 24px;
+		box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.08);
+		border: solid 2px #fff;
+		font-size: 20px;
+
 		&:hover {
 			transform: scale(0.9);
 			transition: 0.25s ease;
@@ -975,6 +1153,11 @@ header {
 		color: #616161;
 	}
 }
+@media (max-width: 1629px) {
+	.card__text {
+		transform: translateY(30%) !important;
+	}
+}
 @media (max-width: 1394px) {
 	.footer__row {
 		padding: 20px;
@@ -1007,16 +1190,34 @@ header {
 	.title {
 		margin: 10% 0px 30px 0px;
 	}
-	.welcome__card.second {
-		margin: 0px 22px 5% 0px;
+	.find__slider {
+		.slick-slide {
+			margin: 0 10px;
+			padding: 50px;
+		}
+		.slick-list {
+			padding: 0;
+		}
 	}
-	.welcome__card.first {
-		margin: 0px 22px 5% 0px;
+	.find {
+		.container {
+			padding: 0;
+		}
+		&__text {
+			padding: 0 10px;
+		}
+		&__menu {
+			// margin-inline: 20px;
+		}
+	}
+	.card__text {
+		transform: translateY(80%) !important;
 	}
 	.find__row {
 		display: flex;
 		flex-wrap: wrap;
 	}
+
 	.find__title {
 		margin-top: 20%;
 	}
@@ -1041,6 +1242,16 @@ header {
 		aspect-ratio: 3 / 2;
 	}
 }
+@media (max-width: 1123px) {
+	.card__text {
+		transform: translateY(77%) !important;
+	}
+}
+@media (max-width: 1023px) {
+	.card__text {
+		transform: translateY(70%) !important;
+	}
+}
 @media (max-width: 992px) {
 	.header__title {
 		margin-top: 23%;
@@ -1049,8 +1260,7 @@ header {
 		text-align: center;
 		width: 309px;
 		height: 309px;
-		// margin: 0px 22px 10% 0px;
-		padding: 80px 50px 50px 50px;
+
 		border: 1px solid #a09e9e;
 		border-radius: 10px;
 		&:hover {
@@ -1060,9 +1270,12 @@ header {
 			border-radius: 15px;
 			padding: 70px 20px 20px 20px;
 			box-shadow: 20px 15px 10px gray;
+			.welcome__items {
+				align-items: flex-start;
+			}
 			.welcome__cardtext {
 				position: relative;
-				opacity: 1;
+				display: block;
 				color: white;
 				transition-duration: 0.5s;
 			}
@@ -1102,6 +1315,9 @@ header {
 		&:hover {
 			background-image: url("../img/Best travel.jpg");
 			background-position: center;
+			.welcome__subtitle {
+				display: block;
+			}
 			&:before {
 				content: "";
 
@@ -1145,8 +1361,9 @@ header {
 	.title {
 		margin: 10% 0px 30px 0px;
 	}
-	.welcome__card {
-		margin: 0px 22px 10% 0px;
+	.find__card {
+		// height: 200px;
+		// width: 80%;
 	}
 	.find__row {
 		display: flex;
@@ -1169,7 +1386,7 @@ header {
 		align-items: center;
 		justify-content: center;
 
-		padding: 50px;
+		// padding: 50px;
 	}
 	.book__btn {
 		max-width: 178px;
@@ -1195,6 +1412,8 @@ header {
 	.header__title {
 		margin-top: 9%;
 		font-size: 60px;
+	}
+	.comments__slider {
 	}
 }
 @media (max-width: 767px) {
@@ -1225,12 +1444,11 @@ header {
 		backdrop-filter: blur(10px);
 		padding: 100px 0px 0px 0px;
 		z-index: 3;
-		transition: all 0.4s ease 0s;
+		transition: all 0.6s ease 0s;
 	}
 	.header__items.active {
 		right: 0;
-		transition: all 0.4s ease 0s;
-		padding: 50px 0px 0px 0px;
+		transition: all 0.6s ease 0s;
 	}
 	.header__list {
 		display: flex;
@@ -1298,26 +1516,9 @@ header {
 		gap: 20px;
 	}
 	.welcome__subtitle {
-		margin-bottom: 5%;
+		margin-bottom: 15%;
 	}
 
-	.welcome__card {
-		padding: 100px 50px 50px 50px;
-	}
-
-	.welcome__card.second {
-		margin: 0px 0px 7% 0px;
-	}
-	.welcome__card.first {
-		margin: 0px 0px 7% 0px;
-	}
-	.welcome__card.third {
-		margin: 0px 0px 7% 0px;
-	}
-
-	.first {
-		margin: 0px 0px 0px 0px;
-	}
 	.find__content {
 		max-width: 3000px;
 	}
@@ -1413,12 +1614,16 @@ header {
 		z-index: 3;
 		transition: all 0.4s ease 0s;
 	}
-	.welcome__card {
-		padding: 90px 50px 50px 12%;
+
+	.find__menu {
+		margin-bottom: 10%;
+		margin-inline: 20px;
+	}
+	.find__slider {
+		padding: 0px 10px;
 	}
 	.Blog__row {
 		max-width: 400px;
-		// max-height: 100%;
 	}
 	.Blog__body {
 		display: grid;
@@ -1491,11 +1696,16 @@ header {
 	.slick-list {
 		overflow: hidden;
 	}
-	.slick-track {
-		gap: 60px;
+	.slick-slide {
+		margin: 0px 20px;
 	}
-	.slick-arrow {
-		opacity: 0;
+	.comments__slider {
+		position: relative;
+		.slick-list {
+			// max-width: 100%;
+			overflow: hidden;
+			padding: 40px 0px;
+		}
 	}
 }
 @media (max-width: 380px) {
