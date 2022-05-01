@@ -309,6 +309,8 @@ header {
   padding: 70px 20px 20px 20px;
   -webkit-box-shadow: 20px 15px 10px gray;
           box-shadow: 20px 15px 10px gray;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   -webkit-transition: 1.25s ease;
   transition: 1.25s ease;
 }
@@ -651,6 +653,8 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
 }
 
 .find__card.active:hover {
@@ -678,6 +682,8 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
 }
 
 .find__cardtitle {
@@ -700,6 +706,14 @@ header {
   background: #ffae00;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
 }
 
 .find .card__text {
@@ -710,14 +724,14 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 9px;
   height: 100%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 0px 0px 20px 20px;
-  -webkit-transform: translateY(26%);
-          transform: translateY(26%);
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
   -webkit-transition: -webkit-transform 500ms ease;
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
@@ -727,6 +741,7 @@ header {
 }
 
 .find__cardsubtitle {
+  max-width: 40ch;
   color: white;
   font-size: 14px;
 }
@@ -1361,9 +1376,29 @@ header {
 }
 
 @media (max-width: 1629px) {
-  .card__text {
-    -webkit-transform: translateY(30%) !important;
-            transform: translateY(30%) !important;
+  .find__card.hover:hover {
+    -webkit-box-shadow: 30px 20px 20px gray;
+            box-shadow: 30px 20px 20px gray;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .find__card.hover:hover .find__cardtitle :after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transition: -webkit-transform 500ms ease;
+    transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease;
+    transition: transform 500ms ease, -webkit-transform 500ms ease;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+  .find__card.hover:hover .card__text {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: -webkit-transform 500ms ease;
+    transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease;
+    transition: transform 500ms ease, -webkit-transform 500ms ease;
   }
 }
 
@@ -1406,7 +1441,6 @@ header {
   }
   .find__slider .slick-slide {
     margin: 0 10px;
-    padding: 50px;
   }
   .find__slider .slick-list {
     padding: 0;
@@ -1416,10 +1450,6 @@ header {
   }
   .find__text {
     padding: 0 10px;
-  }
-  .card__text {
-    -webkit-transform: translateY(80%) !important;
-            transform: translateY(80%) !important;
   }
   .find__row {
     display: -webkit-box;
@@ -1459,20 +1489,6 @@ header {
     -ms-grid-row: 5;
         grid-row-start: 5;
     aspect-ratio: 3 / 2;
-  }
-}
-
-@media (max-width: 1123px) {
-  .card__text {
-    -webkit-transform: translateY(77%) !important;
-            transform: translateY(77%) !important;
-  }
-}
-
-@media (max-width: 1023px) {
-  .card__text {
-    -webkit-transform: translateY(70%) !important;
-            transform: translateY(70%) !important;
   }
 }
 
