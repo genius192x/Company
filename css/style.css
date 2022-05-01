@@ -862,8 +862,9 @@ header {
 }
 
 .Germany {
-  background-image: url("../img/Spain.jpg");
+  background-image: url("../img/Germany.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .Germany .card__text {
