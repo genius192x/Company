@@ -586,6 +586,13 @@ header {
 		border-radius: 10px;
 		line-height: 2;
 		background-color: #fff;
+		transition: 200ms ease;
+		&:hover {
+			background-color: #616161;
+			color: white;
+			transition: 300ms ease;
+			transform-origin: left;
+		}
 	}
 }
 
@@ -596,58 +603,190 @@ header {
 .Thailand {
 	background-image: url("../img/Thailand.jpg");
 	background-size: cover;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(50%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 .USA {
 	background-image: url("../img/USA.jpg");
 	background-size: cover;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(55%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 .Canada {
 	background-image: url("../img/Canada.jpg");
 	background-size: cover;
 	background-position: right;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(58%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 .Germany {
 	background-image: url("../img/Germany.jpg");
 	background-size: cover;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(40%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 .Spain {
 	background-image: url("../img/Spain.jpg");
 	background-size: cover;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(68%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 .Italy {
 	background-image: url("../img/Italy.jpg");
 	background-size: cover;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(55%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 .Brazil {
 	background-image: url("../img/Brazil.jpg");
 	background-size: cover;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(58%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 
 .Australia {
 	background-image: url("../img/Australia.jpg");
 	background-size: cover;
 	background-position: right;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(50%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 
 .Indonesia {
 	background-image: url("../img/Indonesia.jpg");
 	background-size: cover;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(45%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 
 .France {
 	background-image: url("../img/France.jpg");
 	background-size: cover;
 	background-position: right;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(58%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 
 .Malaysia {
 	background-image: url("../img/Malaysia.jpg");
 	background-size: cover;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(68%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 
 .UAE {
 	background-image: url("../img/UAE.jpg");
 	background-size: cover;
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 9px;
+		height: 100%;
+		justify-content: flex-end;
+		padding: 0px 0px 20px 20px;
+		transform: translateY(63%);
+		transition: transform 500ms ease;
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+	}
 }
 
 .title {
