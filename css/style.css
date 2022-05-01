@@ -493,6 +493,10 @@ header {
       justify-content: space-around;
 }
 
+.find__list li {
+  cursor: pointer;
+}
+
 .find .filter__item.active {
   display: inline-block;
   background: linear-gradient(45deg, #fa9600, #ff5e00, #f8e800);
@@ -862,7 +866,7 @@ header {
 }
 
 .Germany {
-  background-image: url("../img/Germany.jpg");
+  background-image: url("../img/Germany.JPG");
   background-size: cover;
   background-position: center;
 }

@@ -383,6 +383,9 @@ header {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
+		li {
+			cursor: pointer;
+		}
 	}
 	.filter__item.active {
 		display: inline-block;
@@ -644,7 +647,7 @@ header {
 	}
 }
 .Germany {
-	background-image: url("../img/Germany.jpg");
+	background-image: url("../img/Germany.JPG");
 	background-size: cover;
 	background-position: center;
 	.card__text {
