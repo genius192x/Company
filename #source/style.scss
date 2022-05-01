@@ -566,7 +566,7 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(30%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.404), rgba(0, 0, 0, 0.993));
 	}
 	&__cardsubtitle {
 		max-width: 40ch;
@@ -612,7 +612,6 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(50%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 .USA {
@@ -627,7 +626,6 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(55%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 .Canada {
@@ -643,11 +641,10 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(58%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 .Germany {
-	background-image: url("./img/Germany.jpg");
+	background-image: url("../img/Germany.jpg");
 	background-size: cover;
 	.card__text {
 		display: flex;
@@ -658,7 +655,6 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(40%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 .Spain {
@@ -673,7 +669,6 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(68%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 .Italy {
@@ -688,7 +683,6 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(55%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 .Brazil {
@@ -703,7 +697,6 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(58%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 
@@ -720,7 +713,6 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(50%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 
@@ -736,7 +728,6 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(45%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 
@@ -753,7 +744,6 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(58%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 
@@ -769,7 +759,6 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(68%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 
@@ -785,7 +774,6 @@ header {
 		padding: 0px 0px 20px 20px;
 		transform: translateY(63%);
 		transition: transform 500ms ease;
-		background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 	}
 }
 

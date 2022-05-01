@@ -736,8 +736,8 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.404)), to(rgba(0, 0, 0, 0.993)));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.404), rgba(0, 0, 0, 0.993));
 }
 
 .find__cardsubtitle {
@@ -804,8 +804,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .USA {
@@ -833,8 +831,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .Canada {
@@ -863,8 +859,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .Germany {
@@ -892,8 +886,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .Spain {
@@ -921,8 +913,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .Italy {
@@ -950,8 +940,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .Brazil {
@@ -979,8 +967,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .Australia {
@@ -1009,8 +995,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .Indonesia {
@@ -1038,8 +1022,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .France {
@@ -1068,8 +1050,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .Malaysia {
@@ -1097,8 +1077,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .UAE {
@@ -1126,8 +1104,6 @@ header {
   transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(255, 94, 0, 0)), to(rgba(0, 0, 0, 0.993)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 94, 0, 0), rgba(0, 0, 0, 0.993));
 }
 
 .subtitle {
