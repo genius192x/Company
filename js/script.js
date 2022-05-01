@@ -3,6 +3,11 @@ $(document).ready(function () {
 		$('.header__burger, .header__items').toggleClass('active');
 		$('body').toggleClass('lock');
 	});
+	$('.header__items').click(function (event) {
+		$('.header__burger, .header__items').removeClass('active');
+		$('body').removeClass('lock');
+
+	});
 	$('.comments__slider').slick({
 		arrows: true,
 		dots: true,
@@ -144,3 +149,12 @@ $('.filter__item').click(function (event) {
 	$(this).addClass('active')
 	return false;
 })
+
+$("a.menu__link").on("click", function (e) {
+	e.preventDefault();
+	var anchor = $(this).attr('href');
+	$('html, body').stop().animate({
+		scrollTop: $(anchor).offset().top - 0
+	}, 700);
+});
+
