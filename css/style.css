@@ -707,7 +707,7 @@ header {
   width: 50%;
   left: -20px;
   bottom: 0;
-  background: #ffae00;
+  background: #ffae0071;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 500ms ease;
