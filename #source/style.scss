@@ -215,7 +215,7 @@ body {
 	&::before {
 		content: "";
 		position: absolute;
-		background-image: url(/img/background_lines/01.svg);
+		background-image: url("../img/background_lines/01.svg");
 		background-repeat: no-repeat;
 		top: 0;
 		left: 100px;
@@ -226,7 +226,7 @@ body {
 	&::after {
 		content: "";
 		position: absolute;
-		background-image: url(/img/background_lines/02.svg);
+		background-image: url("../img/background_lines/02.svg");
 		background-repeat: no-repeat;
 		top: 0;
 		right: 0px;
@@ -334,7 +334,7 @@ body {
 	position: relative;
 	&::after {
 		content: ("");
-		background-image: url(/img/background_lines/03.svg);
+		background-image: url("../img/background_lines/03.svg");
 		width: 700px;
 		height: 100%;
 		bottom: -300px;
@@ -481,7 +481,7 @@ body {
 		&::after {
 			content: ("");
 			position: absolute;
-			background-image: url(/img/project/Group.svg);
+			background-image: url("../img/project/Group.svg");
 			background-repeat: no-repeat;
 			width: 1203px;
 			height: 400px;
@@ -492,7 +492,7 @@ body {
 		&::before {
 			content: ("");
 			position: absolute;
-			background-image: url(/img/project/01.svg);
+			background-image: url("../img/project/01.svg");
 			background-repeat: no-repeat;
 			width: 823px;
 			height: 100%;
@@ -733,7 +733,7 @@ body {
 		&::after {
 			content: ("");
 			position: absolute;
-			background-image: url(/img/project/Group.svg);
+			background-image: url("../img/project/Group.svg");
 			background-repeat: no-repeat;
 			width: 1203px;
 			height: 400px;
@@ -744,7 +744,7 @@ body {
 		&::before {
 			content: ("");
 			position: absolute;
-			background-image: url(/img/project/01.svg);
+			background-image: url("../img/project/01.svg");
 			background-repeat: no-repeat;
 			width: 823px;
 			height: 100%;
@@ -861,7 +861,7 @@ body {
 		&::after {
 			content: ("");
 			position: absolute;
-			background-image: url(/img/project/Group.svg);
+			background-image: url("../img/project/Group.svg");
 			background-repeat: no-repeat;
 			width: 1203px;
 			height: 400px;
@@ -872,7 +872,7 @@ body {
 		&::before {
 			content: ("");
 			position: absolute;
-			background-image: url(/img/project/01.svg);
+			background-image: url("../img/project/01.svg");
 			background-repeat: no-repeat;
 			width: 823px;
 			height: 100%;
@@ -893,7 +893,7 @@ body {
 		&::after {
 			content: ("");
 			position: absolute;
-			background-image: url(/img/project/Group.svg);
+			background-image: url("../img/project/Group.svg");
 			background-repeat: no-repeat;
 			width: 1203px;
 			height: 400px;
@@ -904,7 +904,7 @@ body {
 		&::before {
 			content: ("");
 			position: absolute;
-			background-image: url(/img/project/01.svg);
+			background-image: url("../img/project/01.svg");
 			background-repeat: no-repeat;
 			width: 823px;
 			height: 100%;
