@@ -837,6 +837,152 @@ body {
   color: #637381;
 }
 
+.help {
+  position: relative;
+}
+
+.help::after {
+  content: "";
+  background-image: url("../img/help/rain.svg");
+  width: 700px;
+  height: 100%;
+  bottom: -100px;
+  right: -200px;
+  position: absolute;
+  background-repeat: no-repeat;
+  -webkit-transform: scaleX(-1) rotate(-120deg);
+          transform: scaleX(-1) rotate(-120deg);
+}
+
+.help__container {
+  margin-top: 165px;
+}
+
+.help__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 84px;
+}
+
+.help__picure {
+  position: relative;
+  width: 493px;
+  height: 446px;
+}
+
+.help__picture-main {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  z-index: 10;
+}
+
+.help__picture-main img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 373px;
+}
+
+.help__lines {
+  position: absolute;
+  left: -40px;
+  bottom: 60px;
+  z-index: 9;
+}
+
+.help__dots-top {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  z-index: 8;
+}
+
+.help__dots-middle {
+  position: absolute;
+  bottom: 149px;
+  right: 0;
+  z-index: 7;
+}
+
+.help__info {
+  max-width: 510px;
+  max-height: 290px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+.help__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  /* identical to box height, or 123% */
+  letter-spacing: 0.325px;
+  /* T2 */
+  color: #99efd0;
+}
+
+.help__subtitle {
+  font-family: "Gilroy-SemiBold";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  /* or 133% */
+  letter-spacing: 0.2px;
+  /* T1 */
+  color: #8476aa;
+}
+
+.help__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+}
+
+.help__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.help__card-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  /* T2 */
+  color: #99efd0;
+}
+
+.help__card-subtitle {
+  font-family: "Gilroy-SemiBold";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  /* or 133% */
+  letter-spacing: 0.2px;
+  /* T1 */
+  color: #8476aa;
+}
+
 @media (max-width: 1170px) {
   .traffic__info {
     margin-bottom: 50px;
@@ -871,6 +1017,18 @@ body {
   }
   .business__body::after {
     right: -5%;
+  }
+  .help__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1027,6 +1185,35 @@ body {
   .business__body {
     gap: 100px;
   }
+  .help__picture-main {
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    -o-object-fit: fill;
+       object-fit: fill;
+    z-index: 10;
+  }
+  .help__picture-main img {
+    max-width: 300px;
+  }
+  .help__lines {
+    position: absolute;
+    left: 10px;
+    bottom: 100px;
+    z-index: 9;
+  }
+  .help__dots-top {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    z-index: 8;
+  }
+  .help__dots-middle {
+    position: absolute;
+    bottom: 149px;
+    right: 80px;
+    z-index: 7;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1109,5 +1296,37 @@ body {
     letter-spacing: 0.5px;
     color: #ffffff;
     opacity: 0.8;
+  }
+  .help__picture-main {
+    position: absolute;
+    top: 30px;
+    left: 130px;
+    -o-object-fit: fill;
+       object-fit: fill;
+    z-index: 10;
+  }
+  .help__picture-main img {
+    max-width: 250px;
+  }
+  .help__lines {
+    position: absolute;
+    left: 70px;
+    bottom: 170px;
+    z-index: 9;
+  }
+  .help__lines img {
+    max-width: 90px;
+  }
+  .help__dots-top {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    z-index: 8;
+  }
+  .help__dots-middle {
+    position: absolute;
+    bottom: 180px;
+    right: 80px;
+    z-index: 7;
   }
 }
