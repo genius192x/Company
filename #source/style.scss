@@ -72,6 +72,9 @@ body {
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			word-spacing: 20px;
+			&:hover {
+				color: white;
+			}
 		}
 	}
 
@@ -99,6 +102,9 @@ body {
 	line-height: 20px;
 	padding: 10px 26px;
 	color: orange;
+	&:hover {
+		transform: scale(0.95);
+	}
 	a {
 		color: orange;
 	}
@@ -106,6 +112,9 @@ body {
 .orange {
 	background-color: orange;
 	border-radius: 5px;
+	&:hover {
+		transform: scale(0.95);
+	}
 	a {
 		color: white;
 	}
@@ -161,7 +170,7 @@ body {
 	}
 
 	&__picture {
-		max-width: 420px;
+		width: 1000px;
 		// img {
 		// 	object-fit: cover;
 		// }
@@ -178,7 +187,7 @@ body {
 		margin-right: 20px;
 	}
 	&__item {
-		width: 80%;
+		width: 90%;
 		aspect-ratio: 2 / 1;
 	}
 	&__video-title {
@@ -218,8 +227,8 @@ body {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 22px;
-
-	color: #8476aa;
+	// letter-spacing: 2px;
+	color: hsl(256, 26%, 70%);
 }
 .border {
 }
@@ -342,7 +351,7 @@ body {
 	font-size: 14px;
 	line-height: 22px;
 
-	color: #8476aa;
+	color: hsl(256, 26%, 70%);
 }
 .traffic {
 	position: relative;
@@ -818,7 +827,7 @@ body {
 
 		/* T1 */
 
-		color: #8476aa;
+		color: hsl(256, 26%, 70%);
 	}
 
 	&__cards {
@@ -850,13 +859,10 @@ body {
 		font-weight: 400;
 		font-size: 15px;
 		line-height: 20px;
-		/* or 133% */
 
 		letter-spacing: 0.2px;
 
-		/* T1 */
-
-		color: #8476aa;
+		color: hsl(256, 26%, 70%);
 	}
 }
 .form {
@@ -1324,7 +1330,7 @@ body {
 		top: 246px;
 		background-color: #516ea9;
 		border-radius: 0 5px 5px 0;
-		padding: 15px 10px 10px 10px;
+		padding: 15px 5px 10px 5px;
 		span {
 			font-family: "Montserrat";
 			font-style: normal;
@@ -1390,6 +1396,9 @@ body {
 		&:before {
 			background-repeat: no-repeat;
 		}
+	}
+	.form__container {
+		margin-top: 70px;
 	}
 	.form__input {
 		input {

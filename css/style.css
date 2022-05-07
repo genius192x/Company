@@ -161,6 +161,10 @@ body {
   word-spacing: 20px;
 }
 
+.header__item a:hover {
+  color: white;
+}
+
 .header__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,6 +194,11 @@ body {
   color: orange;
 }
 
+.border:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 .border a {
   color: orange;
 }
@@ -197,6 +206,11 @@ body {
 .orange {
   background-color: orange;
   border-radius: 5px;
+}
+
+.orange:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .orange a {
@@ -265,7 +279,7 @@ body {
 }
 
 .page__picture {
-  max-width: 420px;
+  width: 1000px;
 }
 
 .page__preview {
@@ -286,7 +300,7 @@ body {
 }
 
 .page__item {
-  width: 80%;
+  width: 90%;
   aspect-ratio: 2 / 1;
 }
 
@@ -330,7 +344,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: #8476aa;
+  color: #a99fc6;
 }
 
 .partners {
@@ -456,7 +470,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
-  color: #8476aa;
+  color: #a99fc6;
 }
 
 .traffic {
@@ -944,7 +958,7 @@ body {
   /* or 133% */
   letter-spacing: 0.2px;
   /* T1 */
-  color: #8476aa;
+  color: #a99fc6;
 }
 
 .help__cards {
@@ -981,10 +995,8 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
-  /* or 133% */
   letter-spacing: 0.2px;
-  /* T1 */
-  color: #8476aa;
+  color: #a99fc6;
 }
 
 .form {
@@ -1481,7 +1493,7 @@ body {
     top: 246px;
     background-color: #516ea9;
     border-radius: 0 5px 5px 0;
-    padding: 15px 10px 10px 10px;
+    padding: 15px 5px 10px 5px;
   }
   .second__text span {
     font-family: "Montserrat";
@@ -1544,6 +1556,9 @@ body {
   }
   .form:before {
     background-repeat: no-repeat;
+  }
+  .form__container {
+    margin-top: 70px;
   }
   .form__input input {
     border-radius: 5px;
