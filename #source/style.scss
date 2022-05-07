@@ -1,6 +1,9 @@
 @import "_nullstyle";
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic");
+
 /*------------------!ROOT---------------------------------------------------------------------------------------------*/
 :root {
 }
@@ -32,10 +35,15 @@ body {
 	}
 
 	&__body {
+		// margin-inline: -20px;
+		// padding: 20px 20px;
+		// position: fixed;
+		z-index: 1000;
+		// width: 1100px;
+		background-color: #0f1148;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 50px;
 	}
 	&__burger {
 		display: none;
@@ -199,6 +207,9 @@ body {
 	font-weight: 700;
 	font-size: 44px;
 	line-height: 50px;
+	/* or 114% */
+
+	/* T2 */
 
 	color: #99efd0;
 }
@@ -511,27 +522,6 @@ body {
 
 	&__batton {
 		position: relative;
-		// &::after {
-		// 	content: ("");
-		// 	position: absolute;
-		// 	background-image: url(/img/project/Group.svg);
-		// 	background-repeat: no-repeat;
-		// 	width: 1203px;
-		// 	height: 400px;
-
-		// 	bottom: -70px;
-		// 	right: -80px;
-		// }
-		// &::before {
-		// 	content: ("");
-		// 	position: absolute;
-		// 	background-image: url(/img/project/01.svg);
-		// 	background-repeat: no-repeat;
-		// 	width: 823px;
-		// 	height: 100%;
-		// 	bottom: -70px;
-		// 	right: 100px;
-		// }
 
 		a {
 			line-height: 3;
@@ -736,8 +726,8 @@ body {
 		background-image: url("../img/help/rain.svg");
 		width: 700px;
 		height: 100%;
-		bottom: -100px;
-		right: -200px;
+		bottom: 0px;
+		right: -400px;
 		position: absolute;
 		background-repeat: no-repeat;
 		transform: scaleX(-1) rotate(-120deg);
@@ -818,7 +808,7 @@ body {
 	}
 
 	&__subtitle {
-		font-family: "Gilroy-SemiBold";
+		// font-family: "Gilroy-SemiBold";
 		font-weight: 400;
 		font-size: 15px;
 		line-height: 20px;
@@ -869,8 +859,197 @@ body {
 		color: #8476aa;
 	}
 }
+.form {
+	position: relative;
+	&:before {
+		content: ("");
+		background-image: url("/img/form/Group.svg");
+		width: 100%;
+		height: 100%;
+		top: -50px;
+		left: 0;
+		position: absolute;
+		z-index: -1;
+	}
+	&__container {
+		margin-top: 150px;
+
+		// overflow: visible;
+	}
+
+	&__body {
+		margin: 0 auto;
+		max-width: 940px;
+		max-height: 324px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: 20px;
+		padding: 50px 150px;
+		background-color: rgb(42, 42, 82);
+		// backdrop-filter: blur(134px);
+		/* Note: backdrop-filter has minimal browser support */
+
+		border-radius: 5px;
+		z-index: 200;
+	}
+
+	&__text {
+	}
+
+	&__title {
+		color: orange;
+		font-size: 36px;
+		margin-bottom: 15px;
+	}
+
+	&__subtitle {
+	}
+
+	&__items {
+		display: flex;
+	}
+
+	&__input {
+		color: white;
+
+		input {
+			width: 288px;
+			height: 56px;
+			background-color: rgb(53, 53, 104);
+			border-radius: 5px 0px 0px 5px;
+			font-size: 18px;
+			padding: 0px 10px;
+			color: white;
+		}
+	}
+
+	&__btn {
+		border-radius: 0px 5px 5px 0px;
+		height: 100%;
+		width: 100%;
+		span {
+			padding: 0px 45px;
+			font-family: "Rubik";
+			font-style: normal;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 20px;
+			/* identical to box height, or 167% */
+
+			text-align: center;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+
+			color: #ffffff;
+		}
+	}
+
+	&__recommendation {
+		font-family: "Gilroy-SemiBold";
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		/* identical to box height, or 143% */
+
+		letter-spacing: 0.2px;
+
+		/* T1 */
+
+		color: #8476aa;
+	}
+}
+.footer {
+	&__container {
+		margin-top: 185px;
+	}
+
+	&__body {
+		max-width: 992px;
+		max-height: 437px;
+		margin-bottom: 100px;
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__social {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__title {
+		color: orange;
+		font-size: 26px;
+	}
+
+	&__icons {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__icon {
+	}
+
+	&__columns {
+		margin-top: 86px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+	}
+
+	&__columns-title {
+		margin-bottom: 25px;
+	}
+
+	&__links {
+	}
+
+	&__list {
+	}
+
+	&__link {
+		margin-bottom: 12px;
+	}
+}
+.container {
+}
+.title {
+}
+.columns-title {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	letter-spacing: 0.2px;
+
+	color: #ffffff;
+}
+.columns-subtitle {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 20px;
+	/* identical to box height, or 133% */
+
+	letter-spacing: 0.2px;
+
+	color: #ffffff;
+}
 
 @media (max-width: 1170px) {
+	// .header__body {
+	// 	max-width: 1000px;
+	// }
 	.traffic__info {
 		// max-width: 100%;
 		margin-bottom: 50px;
@@ -1077,6 +1256,16 @@ body {
 		right: 80px;
 		z-index: 7;
 	}
+	.form__body {
+		max-height: 500px;
+		padding: 30px 50px;
+	}
+	.footer__columns {
+		display: flex;
+		gap: 50px;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
 }
 @media (max-width: 480px) {
 	.header__body {
@@ -1191,5 +1380,40 @@ body {
 		bottom: 180px;
 		right: 80px;
 		z-index: 7;
+	}
+	.form__items {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.form {
+		&:before {
+			background-repeat: no-repeat;
+		}
+	}
+	.form__input {
+		input {
+			border-radius: 5px;
+		}
+	}
+	.form__btn {
+		border-radius: 5px;
+		height: 100%;
+		width: 50%;
+		span {
+			padding: 20px 45px;
+			font-family: "Rubik";
+			font-style: normal;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 40px;
+			/* identical to box height, or 167% */
+
+			text-align: center;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+
+			color: #ffffff;
+		}
 	}
 }
